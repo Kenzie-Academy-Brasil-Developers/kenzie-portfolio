@@ -14,7 +14,7 @@ import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "../../styles/Buttons";
 import { Container } from "../../styles/Global";
-import logo from "../../assets/img/logo/user.png";
+import logo from "../../public/static/img/logo/user.png";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -52,7 +52,7 @@ export const NavBar: React.FC = () => {
 export const NavLinks = () => {
   return (
     <NavbarLinks>
-      <Button type="primary">Whatsapp</Button>
+      <Button type="primary">Falar no whatsapp</Button>
       <Button type="icon">
         <FaGithub />
       </Button>
