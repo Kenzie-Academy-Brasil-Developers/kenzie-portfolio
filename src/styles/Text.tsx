@@ -34,13 +34,13 @@ export const Text = styled("p", {
             heading3: {
                 fontSize: "$title3",
                 lineHeight: "$title3",
-                fontWeight: 600,
+                fontWeight: 500,
                 ...headingsDefaultConfig
             },
             heading4: {
                 fontSize: "$title4",
                 lineHeight: "$title4",
-                fontWeight: 600,
+                fontWeight: 500,
                 ...headingsDefaultConfig
             },
             body1: {

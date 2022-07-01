@@ -10,6 +10,7 @@ export const Navbar = styled("nav", {
   bottom: "auto",
   padding: "1rem 0",
   width: "100%",
+  zIndex: "99999",
 
   [`& ${Container}`]: {
     display: "flex",

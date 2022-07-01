@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
+import {UseData} from "../../utils/userData"
 
 import {
   Navbar as NavbarWrapper,
@@ -14,12 +15,12 @@ import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "../../styles/Buttons";
 import { Container } from "../../styles/Global";
-import logo from "../../public/static/img/logo/user.png";
 
 export interface MenuButtonOpen {
   open: Boolean;
   setOpen: (value: Boolean) => void;
 }
+
 export const NavBar: React.FC = () => {
   const isWide = useMedia({ maxWidth: "991px" });
 
@@ -34,7 +35,7 @@ export const NavBar: React.FC = () => {
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
-            <LogoTipoImage src={logo} />
+            <LogoTipoImage src={`https://github.com/${UseData.githubUser}.png`} />
             <LogoTipoText>Camila Duarte</LogoTipoText>
           </LogoTipo>
           {isWide && (
@@ -53,10 +54,10 @@ export const NavLinks = () => {
   return (
     <NavbarLinks>
       <Button type="primary">Falar no whatsapp</Button>
-      <Button type="icon">
+      <Button type="icon" target="_blank" as="a" href={`https://github.com/${UseData.githubUser}`}>
         <FaGithub />
       </Button>
-      <Button type="icon">
+      <Button type="icon" target="_blank" as="a" href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}>
         <FaLinkedinIn />
       </Button>
     </NavbarLinks>

@@ -35,6 +35,17 @@ export const Button = styled('button', {
                 "&:hover": {
                     backgroundColor: "$grey5",
                 }
+            },
+            circle: {
+                borderColor: "$grey5",
+                backgroundColor: "#ffffff",
+                borderRadius: "50%",
+                padding: "0",
+                width: "2.75rem",
+                height: "2.75rem",
+                "&:hover": {
+                    backgroundColor: "$grey5",
+                }
             }
         },
         ...colors
