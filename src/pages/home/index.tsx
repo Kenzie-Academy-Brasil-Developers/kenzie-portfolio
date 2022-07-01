@@ -50,7 +50,7 @@ export const Home = () => {
             {stackData.map((stack, index) => (
               <StackCard key={index}>
                 <Text>{stack.title}</Text>
-                <img src={stack.img} alt="" />
+                <img src={stack.img} alt={stack.title} title={stack.title} width="84px" height="84px"/>
               </StackCard>
             ))}
           </StackCards>

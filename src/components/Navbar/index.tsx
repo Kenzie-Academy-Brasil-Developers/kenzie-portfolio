@@ -58,10 +58,10 @@ export const NavLinks = () => {
   return (
     <NavbarLinks>
       <Button type="primary" as="a" target="_blank" href={`https://api.whatsapp.com/send?phone=+55${UseData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}>Falar no whatsapp</Button>
-      <Button type="icon" target="_blank" as="a" href={`https://github.com/${UseData.githubUser}`}>
+      <Button type="icon" target="_blank" as="a" aria-label="Github" href={`https://github.com/${UseData.githubUser}`}>
         <FaGithub />
       </Button>
-      <Button type="icon" target="_blank" as="a" href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}>
+      <Button type="icon" target="_blank" as="a" aria-label="LinkedIn" href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}>
         <FaLinkedinIn />
       </Button>
     </NavbarLinks>

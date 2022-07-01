@@ -54,8 +54,8 @@ export const globalStyles = globalCss({
     fontFamily: "'Inter', sans-serif",
     boxSizing: "border-box",
   },
-  html: {
-    scrollBehavior: "smooth",
+  "html": {
+  scrollBehavior: "smooth"
   },
   a: { textDecoration: "none" },
 });
@@ -99,18 +99,18 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       title2Mobile: "$title3",
     },
     lineHeights: {
-      title1: "2.75rem",
-      title2: "1.75rem",
-      title3: "1.5rem",
+      title1: "3.8rem",
+      title2: "2.75rem",
+      title3: "2.5rem",
       title4: "1.25rem",
       text1: "1.75rem",
       text2: "1.75rem",
 
-      // Mobile
-      title1Mobile: "$title2",
-      title2Mobile: "$title3",
+       // Mobile
+       title1Mobile: "$title2",
+       title2Mobile: "$title3",
     },
-
+   
     radii: {
       1: "0.5rem",
       2: "0.25rem",
