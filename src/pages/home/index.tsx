@@ -11,6 +11,7 @@ import {
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
 } from "./style";
+
 import { Container } from "../../styles/Global";
 import { Button } from "../../styles/Buttons";
 import { stackData } from "../../utils/stackData";

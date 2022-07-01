@@ -1,5 +1,6 @@
 export const UseData = {
-    nameUser: "",
+    nameUser: "Samuel Leão",
     githubUser: "samuelleaokenzie",
-    linkedinUser: "samuelleao"
+    linkedinUser: "samuelleao",
+    whatsappNumber: "84987982162",
 }

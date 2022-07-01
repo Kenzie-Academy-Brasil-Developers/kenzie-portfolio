@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
-import {UseData} from "../../utils/userData"
+import { UseData } from "../../utils/userData"
 
 import {
   Navbar as NavbarWrapper,
@@ -21,8 +21,12 @@ export interface MenuButtonOpen {
   setOpen: (value: Boolean) => void;
 }
 
+
+
 export const NavBar: React.FC = () => {
   const isWide = useMedia({ maxWidth: "991px" });
+
+  document.title = UseData.nameUser
 
   const [open, setOpen] = useState(false);
 
@@ -36,7 +40,7 @@ export const NavBar: React.FC = () => {
         <NavbarMobileArea>
           <LogoTipo>
             <LogoTipoImage src={`https://github.com/${UseData.githubUser}.png`} />
-            <LogoTipoText>Camila Duarte</LogoTipoText>
+            <LogoTipoText>{UseData.nameUser}</LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button type="icon" onClick={OpenMenu}>
@@ -53,7 +57,7 @@ export const NavBar: React.FC = () => {
 export const NavLinks = () => {
   return (
     <NavbarLinks>
-      <Button type="primary">Falar no whatsapp</Button>
+      <Button type="primary" as="a" target="_blank" href={`https://api.whatsapp.com/send?phone=+55${UseData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}>Falar no whatsapp</Button>
       <Button type="icon" target="_blank" as="a" href={`https://github.com/${UseData.githubUser}`}>
         <FaGithub />
       </Button>
