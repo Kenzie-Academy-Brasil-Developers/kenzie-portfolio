@@ -40,8 +40,8 @@ export const Home = () => {
             Ferramentas que domino
           </Text>
           <StackCards>
-            {stackData.map((stack) => (
-              <StackCard>
+            {stackData.map((stack, index) => (
+              <StackCard key={index}>
                 <Text>{stack.title}</Text>
                 <img src={stack.img} alt="" />
               </StackCard>
