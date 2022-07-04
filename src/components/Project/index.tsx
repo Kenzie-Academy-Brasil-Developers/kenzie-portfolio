@@ -4,12 +4,12 @@ import {
   ProjectStackTech,
   ProjectLink,
   ProjectLinks,
-} from "./style";
+} from './style';
 
-import { Text } from "../../styles/Text";
-import { useEffect, useState } from "react";
-import { FaGithub, FaShare } from "react-icons/fa";
-import { UseData } from "../../utils/userData";
+import { Text } from '@/styles/Text';
+import { useEffect, useState } from 'react';
+import { FaGithub, FaShare } from 'react-icons/fa';
+import { UseData } from '@/utils/userData';
 
 interface ReposType {
   id: number;
@@ -20,7 +20,7 @@ interface ReposType {
   homepage: string;
 }
 
-export const Project = () => {
+export const Project = (): JSX.Element => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const Project = () => {
     <>
       {repositories?.map((repository) => (
         <ProjectWrapper key={repository.id}>
-          <Text as="h4" type="heading3" css={{ marginBottom: "$3"}} color="grey1">
+          <Text as="h2" type="heading3" css={{ marginBottom: "$3"}} color="grey1">
             {repository.name}
           </Text>
 

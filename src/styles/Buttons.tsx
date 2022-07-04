@@ -1,14 +1,14 @@
-import { styled } from "../styles/stitches.config";
-import { colors } from '../styles/Global'
+import { styled } from '@/styles/stitches.config';
+import { colors } from '@/styles/Global'
 
 export const Button = styled('button', {
     height: "2.75rem",
     appearance: "none",
-    background: "#ffffff",
+    background: "$whiteFixed",
     color: "$grey1",
     fontWeight: "600",
     padding: "0 2rem",
-    border: "2px solid #ffffff",
+    border: "2px solid $whiteFixed",
     borderRadius: "$1",
     cursor: "pointer",
     fontSize: "1rem",
@@ -27,7 +27,11 @@ export const Button = styled('button', {
             primary: {
                 background: "$brand1",
                 borderColor: "$brand1",
-                color: "#ffffff"
+                color: "$whiteFixed",
+                "&:hover": {
+                    backgroundColor: "$brand2",
+                    borderColor: "$brand2",
+                }
             },
             icon: {
                 borderColor: "$grey5",
@@ -38,7 +42,7 @@ export const Button = styled('button', {
             },
             circle: {
                 borderColor: "$grey5",
-                backgroundColor: "#ffffff",
+                backgroundColor: "$whiteFixed",
                 borderRadius: "50%",
                 padding: "0",
                 width: "2.75rem",

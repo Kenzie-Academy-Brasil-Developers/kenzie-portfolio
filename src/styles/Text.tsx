@@ -1,5 +1,5 @@
-import { styled } from "../styles/stitches.config";
-import { colors } from '../styles/Global'
+import { styled } from '@/styles/stitches.config';
+import { colors } from '@/styles/Global'
 
 const headingsDefaultConfig = {
     fontFamily: "$titles"

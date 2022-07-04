@@ -1,6 +1,6 @@
 import { styled } from "@stitches/react";
-import { Button } from "../../styles/Buttons";
-import { Container } from "../../styles/Global"
+import { Button } from '@/styles/Buttons';
+import { Container } from '@/styles/Global'
 
 export const Footer = styled("footer", {
     backgroundColor: "$brand1",

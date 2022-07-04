@@ -1,4 +1,5 @@
-import { Text } from "../../styles/Text";
+import { Text } from '@/styles/Text';
+
 import {
   Header,
   HeaderContent,
@@ -10,17 +11,17 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
-} from "./style";
+} from './style';
 
-import { Container } from "../../styles/Global";
-import { Button } from "../../styles/Buttons";
-import { stackData } from "../../utils/stackData";
-import { Project } from "../../components/Project";
-import { UseData } from "../../utils/userData";
+import { Container } from '@/styles/Global';
+import { Button } from '@/styles/Buttons';
+import { stackData } from '@/utils/stackData';
+import { Project } from '@/components/Project';
+import { UseData } from '@/utils/userData';
 
-export const Home = () => {
+export const Home = (): JSX.Element => {
   return (
-    <>
+    <main>
       <Header>
         <Container>
           <HeaderContent>
@@ -86,6 +87,6 @@ export const Home = () => {
           </ProjectAreaWrapperColumns>
         </Container>
       </ProjectsArea>
-    </>
+    </main>
   );
 };

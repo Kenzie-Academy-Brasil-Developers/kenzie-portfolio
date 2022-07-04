@@ -1,10 +1,10 @@
-import { Container } from "../../styles/Global"
-import { Text } from "../../styles/Text"
-import { Button } from "../../styles/Buttons"
-import { Footer as FooterWrapper } from "./style"
-import { FaAngleUp } from "react-icons/fa"
+import { Container } from '@/styles/Global'
+import { Text } from '@/styles/Text'
+import { Button } from '@/styles/Buttons'
+import { Footer as FooterWrapper } from './style'
+import { FaAngleUp } from 'react-icons/fa'
 
-export const Footer = () =>{
+export const Footer = (): JSX.Element =>{
     return (
         <FooterWrapper>
             <Container>

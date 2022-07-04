@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
-import { UseData } from "../../utils/userData"
+import { UseData } from "@/utils/userData";
 
 import {
   Navbar as NavbarWrapper,
@@ -13,20 +13,18 @@ import {
 
 import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { Button } from "../../styles/Buttons";
-import { Container } from "../../styles/Global";
+import { Button } from "@/styles/Buttons";
+import { Container } from "@/styles/Global";
 
 export interface MenuButtonOpen {
   open: Boolean;
   setOpen: (value: Boolean) => void;
 }
 
-
-
-export const NavBar: React.FC = () => {
+export const NavBar = (): JSX.Element => {
   const isWide = useMedia({ maxWidth: "991px" });
 
-  document.title = UseData.nameUser
+  document.title = UseData.nameUser;
 
   const [open, setOpen] = useState(false);
 
@@ -39,29 +37,54 @@ export const NavBar: React.FC = () => {
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
-            <LogoTipoImage src={`https://github.com/${UseData.githubUser}.png`} />
+            <LogoTipoImage
+              src={`https://github.com/${UseData.githubUser}.png`}
+              alt={UseData.nameUser}
+              title={UseData.nameUser}
+              width={"48px"}
+              height={"48px"}
+            />
             <LogoTipoText>{UseData.nameUser}</LogoTipoText>
           </LogoTipo>
           {isWide && (
-            <Button type="icon" onClick={OpenMenu}>
+            <Button type="icon" onClick={OpenMenu} aria-label={!open ? "Abrir Menu": "Fechar Menu"}>
               {!open ? <FaBars /> : <IoClose />}
             </Button>
           )}
         </NavbarMobileArea>
-        {isWide ? open && <NavLinks /> : <NavLinks/>}
+        {isWide ? open && <NavLinks /> : <NavLinks />}
       </Container>
     </NavbarWrapper>
   );
 };
 
-export const NavLinks = () => {
+export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
-      <Button type="primary" as="a" target="_blank" href={`https://api.whatsapp.com/send?phone=+55${UseData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}>Falar no whatsapp</Button>
-      <Button type="icon" target="_blank" as="a" aria-label="Github" href={`https://github.com/${UseData.githubUser}`}>
+      <Button
+        type="primary"
+        as="a"
+        target="_blank"
+        href={`https://api.whatsapp.com/send?phone=+55${UseData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}
+      >
+        Falar no whatsapp
+      </Button>
+      <Button
+        type="icon"
+        target="_blank"
+        as="a"
+        aria-label="Github"
+        href={`https://github.com/${UseData.githubUser}`}
+      >
         <FaGithub />
       </Button>
-      <Button type="icon" target="_blank" as="a" aria-label="LinkedIn" href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}>
+      <Button
+        type="icon"
+        target="_blank"
+        as="a"
+        aria-label="LinkedIn"
+        href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}
+      >
         <FaLinkedinIn />
       </Button>
     </NavbarLinks>
