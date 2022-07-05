@@ -1,4 +1,6 @@
-import { Text } from '@/styles/Text';
+import { Text } from "@/styles/Text";
+
+import { Stack } from "@/components/Stack";
 
 import {
   Header,
@@ -6,18 +8,17 @@ import {
   HeaderButtonsArea,
   StackSection,
   StackCards,
-  StackCard,
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
-} from './style';
+} from "./style";
 
-import { Container } from '@/styles/Global';
-import { Button } from '@/styles/Buttons';
-import { stackData } from '@/utils/stackData';
-import { Project } from '@/components/Project';
-import { UseData } from '@/utils/userData';
+import { Container } from "@/styles/Global";
+import { Button } from "@/styles/Buttons";
+import { stackData } from "@/utils/stackData";
+import { Project } from "@/components/Project";
+import { userData } from "@/utils/userData";
 
 export const Home = (): JSX.Element => {
   return (
@@ -34,7 +35,9 @@ export const Home = (): JSX.Element => {
               desenvolvendo habilidades
             </Text>
             <HeaderButtonsArea>
-              <Button as="a" href="#projetos">Projetos</Button>
+              <Button as="a" href="#projetos">
+                Projetos
+              </Button>
               <Button as="a" href="#tecnologias" type="btLink" color="grey5">
                 Tecnologias
               </Button>
@@ -49,10 +52,7 @@ export const Home = (): JSX.Element => {
           </Text>
           <StackCards>
             {stackData.map((stack, index) => (
-              <StackCard key={index}>
-                <Text>{stack.title}</Text>
-                <img src={stack.img} alt={stack.title} title={stack.title} width="84px" height="84px"/>
-              </StackCard>
+              <Stack key={index} title={stack.title} icon={stack.img} />
             ))}
           </StackCards>
         </Container>
@@ -69,7 +69,14 @@ export const Home = (): JSX.Element => {
                 para desenvolver esses projetos e estou disposto a trocar
                 algumas ideias por lá
               </Text>
-              <Button type="primary" target="_blank" as="a" href={`https://www.linkedin.com/in/${UseData.linkedinUser}`}>Acessar perfil no LinkedIn</Button>
+              <Button
+                type="primary"
+                target="_blank"
+                as="a"
+                href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
+              >
+                Acessar perfil no LinkedIn
+              </Button>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
               <Text type="body1" color="grey2" css={{ marginBottom: "$2" }}>

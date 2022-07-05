@@ -4,12 +4,12 @@ import {
   ProjectStackTech,
   ProjectLink,
   ProjectLinks,
-} from './style';
+} from "./style";
 
-import { Text } from '@/styles/Text';
-import { useEffect, useState } from 'react';
-import { FaGithub, FaShare } from 'react-icons/fa';
-import { UseData } from '@/utils/userData';
+import { Text } from "@/styles/Text";
+import { useEffect, useState } from "react";
+import { FaGithub, FaShare } from "react-icons/fa";
+import { userData } from "@/utils/userData";
 
 interface ReposType {
   id: number;
@@ -25,7 +25,9 @@ export const Project = (): JSX.Element => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`https://api.github.com/users/${UseData.githubUser}/repos`);
+      const data = await fetch(
+        `https://api.github.com/users/${userData.githubUser}/repos`
+      );
       const json = await data.json();
       setRepositories(json);
       return json;
@@ -37,7 +39,12 @@ export const Project = (): JSX.Element => {
     <>
       {repositories?.map((repository) => (
         <ProjectWrapper key={repository.id}>
-          <Text as="h2" type="heading3" css={{ marginBottom: "$3"}} color="grey1">
+          <Text
+            as="h2"
+            type="heading3"
+            css={{ marginBottom: "$3" }}
+            color="grey1"
+          >
             {repository.name}
           </Text>
 

@@ -5,11 +5,6 @@ import { Flex } from "../../styles/Global";
 import { Button } from "../../styles/Buttons";
 import { Text } from "../../styles/Text";
 
-const scaleUp = keyframes({
-  "0%": { transform: "translateY(15%)" },
-  "100%": { transform: "translateY(-140%)" },
-});
-
 export const Header = styled("header", {
   backgroundColor: "$brand1",
   padding: "12rem 0 8rem 0",
@@ -55,55 +50,6 @@ export const StackCards = styled("div", {
     marginInline: "-1rem",
     paddingInline: "1rem",
     overflow: "auto",
-  }
-});
-
-export const StackCard = styled("div", {
-  minWidth: "10.25rem",
-  maxWidth: "10.25rem",
-  borderRadius: "$1",
-  padding: "1rem",
-  background: "$whiteFixed",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  position: "relative",
-
-  [`& ${Text}`]: {
-    opacity: 0,
-    position: "absolute",
-    transform: "translateY(-15%)",
-    background: "$whiteFixed",
-    boxShadow: "drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.12))",
-    padding: "0.4rem 1rem",
-    borderRadius: "$1",
-    textAlign: "center",
-    fontSize: "1rem",
-    fontWeight: "500",
-    whiteSpace: "nowrap",
-
-    "&:before": {
-      content: "",
-      zIndex: "-1",
-      bottom: "-5px",
-      position: "absolute",
-      width: 0,
-      height: 0,
-      borderLeft: "25px solid transparent",
-      borderRight: "25px solid transparent",
-      borderTop: "25px solid $whiteFixed",
-      transform: "translateX(-50%)",
-      left: "50%"
-    },
-  },
-
-  "&:hover": {
-    [`& ${Text}`]: {
-      opacity: 1,
-      top: 0,
-      transform: "translateY(-140%)",
-      animation: `${scaleUp} 200ms`,
-    },
   },
 });
 
@@ -123,8 +69,8 @@ export const ProjectsAreaSocialMediaMessage = styled("aside", {
     width: "100%",
     position: "static",
     order: "2",
-    marginTop: "5rem"
-  }
+    marginTop: "5rem",
+  },
 });
 
 export const ProjectsAreaContent = styled("div", {
@@ -133,13 +79,13 @@ export const ProjectsAreaContent = styled("div", {
   "@mobile": {
     width: "100%",
     paddingLeft: "0",
-  }
+  },
 });
 
 export const ProjectAreaWrapperColumns = styled(Flex, {
-    position: "relative",
-    alignItems: "flex-start",
-    "@mobile": {
-      flexDirection: "column"
-    }
-})
+  position: "relative",
+  alignItems: "flex-start",
+  "@mobile": {
+    flexDirection: "column",
+  },
+});

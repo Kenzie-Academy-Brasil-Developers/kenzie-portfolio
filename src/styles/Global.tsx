@@ -1,5 +1,5 @@
-import { createTheme, globalCss, styled } from '@stitches/react';
-import { ReactNode } from 'react';
+import { createTheme, globalCss, styled } from "@stitches/react";
+import { ReactNode } from "react";
 
 interface GlobalStyleProps {
   children: ReactNode;
@@ -54,8 +54,8 @@ export const globalStyles = globalCss({
     fontFamily: "'Inter', sans-serif",
     boxSizing: "border-box",
   },
-  "html": {
-  scrollBehavior: "smooth"
+  html: {
+    scrollBehavior: "smooth",
   },
   a: { textDecoration: "none" },
 });
@@ -74,7 +74,7 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       grey5: "#F8F9FA",
       grey6: "#DEE0FB",
       whiteFixed: "#ffffff",
-      mode: "#ffffff"
+      mode: "#ffffff",
     },
     sizes: {
       container: "75rem",
@@ -108,11 +108,11 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       text1: "1.75rem",
       text2: "1.75rem",
 
-       // Mobile
-       title1Mobile: "$title2",
-       title2Mobile: "$title3",
+      // Mobile
+      title1Mobile: "$title2",
+      title2Mobile: "$title3",
     },
-   
+
     radii: {
       1: "0.5rem",
       2: "0.25rem",
