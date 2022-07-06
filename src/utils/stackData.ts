@@ -5,6 +5,7 @@ import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
 import { FaVuejs } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 
 export const stackData = [
   {
@@ -32,4 +33,5 @@ export const stackData = [
     img: imgReact,
   },
   { title: "Vuejs", img: FaVuejs },
+  { title: "TypeScript", img: SiTypescript },
 ];
