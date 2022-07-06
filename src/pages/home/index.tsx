@@ -1,7 +1,17 @@
+// Styles
+import { Container } from "@/styles/Global";
 import { Text } from "@/styles/Text";
+import { Button } from "@/styles/Buttons";
 
+// Components
 import { Stack } from "@/components/Stack";
+import { Project } from "@/components/Project";
 
+// Data
+import { stackData } from "@/utils/stackData";
+import { userData } from "@/utils/userData";
+
+// Page Style
 import {
   Header,
   HeaderContent,
@@ -14,11 +24,6 @@ import {
   ProjectAreaWrapperColumns,
 } from "./style";
 
-import { Container } from "@/styles/Global";
-import { Button } from "@/styles/Buttons";
-import { stackData } from "@/utils/stackData";
-import { Project } from "@/components/Project";
-import { userData } from "@/utils/userData";
 
 export const Home = (): JSX.Element => {
   return (

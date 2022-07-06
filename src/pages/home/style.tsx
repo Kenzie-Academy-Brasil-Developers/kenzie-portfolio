@@ -1,9 +1,8 @@
-import { styled } from "../../styles/stitches.config";
-import { keyframes } from "@stitches/react";
-import img from "../../public/static/img/background/dots.svg";
-import { Flex } from "../../styles/Global";
-import { Button } from "../../styles/Buttons";
-import { Text } from "../../styles/Text";
+import { styled } from "@/styles/stitches.config";
+import { Flex } from "@/styles/Global";
+import { Button } from "@/styles/Buttons";
+
+import img from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
   backgroundColor: "$brand1",

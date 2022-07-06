@@ -1,5 +1,4 @@
 import { StackCard } from "./style";
-
 import { Text } from "@/styles/Text";
 import { IconType } from "react-icons/lib";
 
@@ -8,6 +7,7 @@ interface StackProps {
   icon: string | IconType;
   key: number;
 }
+
 export const Stack = (
   { title, icon: Icon }: StackProps,
   key: number
