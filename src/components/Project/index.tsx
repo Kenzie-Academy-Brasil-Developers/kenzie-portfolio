@@ -40,7 +40,7 @@ export const Project = (): JSX.Element => {
       return json;
     };
     fetchData();
-  }, [repositories]);
+  }, []);
 
   return (
     <>
