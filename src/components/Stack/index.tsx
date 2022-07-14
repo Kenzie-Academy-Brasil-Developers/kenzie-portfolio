@@ -15,7 +15,7 @@ export const Stack = (
   const isString = typeof Icon === "string";
 
   return (
-    <StackCard className={`${key}`} key={key}>
+    <StackCard key={key}>
       <Text>{title}</Text>
       {isString ? (
         <img src={Icon} alt={title} title={title} height="84px" width="84px" />
